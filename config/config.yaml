@@ -1,0 +1,24 @@
+# LLM Configuration for OpenRouter
+
+llm:
+  provider: "openrouter"
+  model: "qwen/qwen3-coder:free"
+  temperature: 0.7
+  max_tokens: 1024
+  max_retries: 3
+  site_url: ""
+  site_title: "ATCE Project"
+
+atce:
+  enable: true
+  use_refinement: true
+  samples_per_prompt: 1
+  max_samples: 100
+
+database:
+  thought_pool_path: "data/ideas.json"
+  programs_path: "data/programs.json"
+
+logging:
+  level: "INFO"
+  file: "logs/atce_run.log"
